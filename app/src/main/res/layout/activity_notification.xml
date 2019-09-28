@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NotificationActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            //RL One : bead bd
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/notification_head_bg">
+
+                <include layout="@layout/toolbar_notification" />
+
+            </RelativeLayout>
+
+            // RL two : title
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Ontem"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="italic|bold" />
+
+            </RelativeLayout>
+
+            // RL three : underline
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/notificationRL_2"
+                android:background="#F3DEDE" />
+
+            // RL Four
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_3"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:paddingTop="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="-25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:elevation="5dp"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/notificationRL_4_text_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/notificationRL_4_text_area_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Jorge.emlo, Germangoural e outars"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_4_text_area_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_4_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:text="31pessoas"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_4_text_area_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_4_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/notificationRL_4_text_area_2"
+                                android:text="curtiram sua"
+                                android:textColor="#9BA1AE" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_4_text_area_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_4_text_area_2"
+                                android:layout_marginLeft="5dp"
+                                android:text="publicacao. 1d"
+                                android:textColor="#9BA1AE" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="22">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="5dp"
+                            android:src="@drawable/notification_img_one" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // RL Five : underline
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/notificationRL_4"
+                android:background="#F3DEDE" />
+
+            // RL Six : title
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Esta semana"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="italic|bold" />
+
+            </RelativeLayout>
+
+            // RL Seven : content
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_6"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:paddingTop="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="-25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:elevation="5dp"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/notificationRL_7_text_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/notificationRL_7_text_area_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Jorge.emlo, Germangoural e outars"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_7_text_area_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_7_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:text="31pessoas"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_7_text_area_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_7_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/notificationRL_7_text_area_2"
+                                android:text="curtiram sua"
+                                android:textColor="#9BA1AE" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_7_text_area_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_7_text_area_2"
+                                android:layout_marginLeft="5dp"
+                                android:text="publicacao. 1d"
+                                android:textColor="#9BA1AE" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="22">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="5dp"
+                            android:src="@drawable/notification_img_one" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // RL Eight : underline
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_8"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/notificationRL_7"
+                android:background="#F3DEDE" />
+
+            // RL Nine : title
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Esta semana"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="italic|bold" />
+
+            </RelativeLayout>
+
+            // RL Ten : content
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_9"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:paddingTop="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="-25dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/notification_image_bg"
+                            android:elevation="5dp"
+                            android:padding="2dp"
+                            android:src="@drawable/profile_img_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/notificationRL_10_text_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/notificationRL_10_text_area_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Jorge.emlo, Germangoural e outars"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_10_text_area_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_10_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:text="31pessoas"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_10_text_area_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_10_text_area_1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/notificationRL_10_text_area_2"
+                                android:text="curtiram sua"
+                                android:textColor="#9BA1AE" />
+
+                            <TextView
+                                android:id="@+id/notificationRL_10_text_area_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/notificationRL_10_text_area_2"
+                                android:layout_marginLeft="5dp"
+                                android:text="publicacao. 1d"
+                                android:textColor="#9BA1AE" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="22">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/home_text_bg_four"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Join"
+                            android:textSize="15sp"
+                            android:textStyle="bold|italic" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // RL Eleven : content
+
+            <RelativeLayout
+                android:id="@+id/notificationRL_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notificationRL_9"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:paddingTop="5dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="70"
+                        android:paddingTop="10dp">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/notification_img_one" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/notification_img_one" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/notification_img_one" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="22">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

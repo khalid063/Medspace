@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Medspace</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="testText">Android studio now supports vectors pre-lollipop.
+        No PNG conversion.
+        You can still change your fill color and it will work.</string>
+</resources>

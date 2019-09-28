@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.LibraryFragment"
+    android:background="#FFFFFF">
+
+    <!-- TODO: Update blank fragment layout -->
+    // toolbar top
+    <RelativeLayout
+        android:id="@+id/toolbarRelLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar_home" />
+
+    </RelativeLayout>
+
+    // Search Box area
+    <RelativeLayout
+        android:id="@+id/searchBoxSearchPage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/toolbarRelLayoutSearch"
+        android:background="@color/toolbar_blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/searchBoxIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/searchBoxIcon"
+                android:background="@null"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    // body part
+    <RelativeLayout
+        android:background="#DA1616"
+        android:layout_above="@+id/bottomNavId"
+        android:layout_below="@+id/searchBoxSearchPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        // body part
+        <androidx.core.widget.NestedScrollView
+            android:background="#DA1616"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="#F5F5F5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                // tile one
+                <RelativeLayout
+                    android:paddingBottom="5dp"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SUBJECT"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#5043F4"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_toLeftOf="@+id/next_icon_Lib_page_sec_1"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="See All"
+                        android:textColor="@color/toolbar_blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic" />
+                    <ImageView
+                        android:id="@+id/next_icon_Lib_page_sec_1"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/next_li_page_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"/>
+
+                </RelativeLayout>
+
+                // body part One
+                <HorizontalScrollView
+                    android:background="#F5F5F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp">
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        // Scroll sec one
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Two
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_two"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Three
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_three"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Four
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                // tile Two
+                <RelativeLayout
+                    android:paddingBottom="5dp"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PATOLOGIAS"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#5043F4"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_toLeftOf="@+id/next_icon_Lib_page_sec_2"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="See All"
+                        android:textColor="@color/toolbar_blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic" />
+                    <ImageView
+                        android:id="@+id/next_icon_Lib_page_sec_2"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/next_li_page_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"/>
+
+                </RelativeLayout>
+
+                // body part Two
+                <HorizontalScrollView
+                    android:background="#F5F5F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp">
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        // Scroll sec one
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Two
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_two"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Three
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_three"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Four
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                // tile Three
+                <RelativeLayout
+                    android:paddingBottom="5dp"
+                    android:background="#F5F5F5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QUIZ"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#5043F4"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_toLeftOf="@+id/next_icon_Lib_page_sec_3"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="See All"
+                        android:textColor="@color/toolbar_blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold|italic" />
+                    <ImageView
+                        android:id="@+id/next_icon_Lib_page_sec_3"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/next_li_page_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"/>
+
+                </RelativeLayout>
+
+                // body part Two
+                <HorizontalScrollView
+                    android:background="#F5F5F5"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp">
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        // Scroll sec one
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Two
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_two"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Three
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_three"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        // Scroll sec Four
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="160dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="10dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/library_img_one"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anatomia"
+                                    android:textSize="15sp"
+                                    android:textColor="#000000"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prograce 0%"
+                                    android:textSize="9sp"
+                                    android:textColor="#B0B0B8"
+                                    android:layout_marginLeft="10dp"/>
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_demo_3"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_marginLeft="3dp"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/profile_pic"
+                                        app:civ_border_width="0dp"
+                                        app:civ_border_color="#FAF7F7"
+                                        android:padding="0dp"/>
+
+                                    <LinearLayout
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:background="#ffffff"
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp">
+                                        <TextView
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="+20"
+                                            android:textSize="8sp"
+                                            android:textColor="#000000"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+
+    // footer area
+    <RelativeLayout
+        android:layout_above="@id/bottomNavId"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F1E9E9"/>
+    <RelativeLayout
+        android:id="@+id/bottomNavId"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/bottom_nav_toolbar"/>
+
+    </RelativeLayout>
+</RelativeLayout>

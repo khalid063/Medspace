@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp"
+    android:background="@color/toolbar_blue">
+
+    // menu icon area
+    <RelativeLayout
+        android:id="@+id/homeIcon"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="22dp"
+            android:layout_height="23dp"
+            android:src="@drawable/menu_icon_psd"/>
+
+    </RelativeLayout>
+
+    // home text
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/homeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_of_toolbr"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textStyle="italic|bold"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    // icons Area right
+
+    <RelativeLayout
+        android:id="@+id/massageIcon"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/profileIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/massage_icon_psd" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/profileIcon"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/bellIcon"
+        android:layout_width="30dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profileIconBut"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/profile_icon_psd" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bellIcon"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/home_toolbar_notificaion_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_add_alert_bell"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

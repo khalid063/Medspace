@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProfileActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            // profile img area
+            <RelativeLayout
+                android:id="@+id/profilePageRLOne"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="5dp"
+                    android:background="@drawable/profile_img_bg"
+                    android:elevation="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/profile_page_img_one"/>
+
+            </RelativeLayout>
+
+            // profile name
+            <RelativeLayout
+                android:layout_marginTop="-10dp"
+                android:id="@+id/profilePageRLTwo"
+                android:layout_below="@+id/profilePageRLOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profilePageRLTwo_text_1"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelly Knight"
+                    android:textStyle="italic|bold"
+                    android:textSize="25sp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/profilePageRLTwo_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medicine Student"
+                    android:textStyle="italic|bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/toolbar_blue"
+                    />
+
+            </RelativeLayout>
+
+            // follower, like area
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/profilePageRLThree"
+                android:layout_below="@+id/profilePageRLTwo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40">
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1250"
+                            android:textStyle="bold|italic"
+                            android:textSize="20sp"
+                            android:textColor="#4530EC"/>
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Likes"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
+                            android:textColor="#000000"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40">
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="125"
+                            android:textStyle="bold|italic"
+                            android:textSize="20sp"
+                            android:textColor="#FBAD4D"/>
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followers"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
+                            android:textColor="#000000"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40">
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500"
+                            android:textStyle="bold|italic"
+                            android:textSize="20sp"
+                            android:textColor="#F86165"/>
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Following"
+                            android:textStyle="bold|italic"
+                            android:textSize="15sp"
+                            android:textColor="#000000"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // prise icon area
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/profilePageRFour"
+                android:layout_below="@+id/profilePageRLThree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <ImageView
+                            android:layout_width="46dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/profile_page_icon_one"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <ImageView
+                            android:layout_width="46dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/profile_page_icon_two"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <ImageView
+                            android:layout_width="46dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/profile_page_icon_three"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <ImageView
+                            android:layout_width="46dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/profile_page_icon_four"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20">
+
+                        <ImageView
+                            android:layout_width="46dp"
+                            android:layout_height="42dp"
+                            android:src="@drawable/profile_page_icon_one"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // under line border
+            <RelativeLayout
+                android:id="@+id/profilePageRLFive"
+                android:layout_below="@+id/profilePageRFour"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ECE5E5"/>
+
+            // RL Six : profile chat
+            <RelativeLayout
+                android:id="@+id/profilePageRLSix"
+                android:layout_below="@id/profilePageRLFive"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                // Card View One
+                <androidx.cardview.widget.CardView
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/profile_img_1"
+                                app:civ_border_width="1dp"
+                                app:civ_border_color="#FAF7F7"
+                                android:padding="7dp"/>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/textOne"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kelly Knight"
+                                    android:textSize="20sp"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold|italic"
+                                    />
+                                <TextView
+                                    android:id="@+id/textTwo"
+                                    android:layout_alignParentRight="true"
+                                    android:paddingRight="20dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30min"
+                                    android:textSize="12sp"
+                                    android:textColor="#CCD0D8"/>
+
+                                <ImageView
+                                    android:id="@+id/timeCountImg"
+                                    android:layout_toLeftOf="@+id/textTwo"
+                                    android:layout_marginRight="5dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/profile_page_clock_icon"/>
+
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            // RL Seven: conversation area
+            <RelativeLayout
+                android:id="@+id/profilePageRLSeven"
+                android:layout_below="@+id/profilePageRLSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testText"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="20dp"
+                    android:textColor="#CDCDCD"/>
+
+            </RelativeLayout>
+
+            // RL Eight : Image
+            <RelativeLayout
+                android:id="@+id/profilePageRLEight"
+                android:layout_below="@+id/profilePageRLSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:paddingRight="0dp"
+                    android:paddingLeft="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:src="@drawable/imag3"/>
+
+            </RelativeLayout>
+
+            // RL Nine : like shair msg notification
+            <RelativeLayout
+                android:id="@+id/profilePageRLNine"
+                android:layout_below="@+id/profilePageRLEight"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="120">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_like"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 K"
+                            android:textSize="15sp"
+                            android:textColor="#F7585E"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:background="@drawable/home_text_bg_two"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Share" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="40"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_comment"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="98"
+                            android:textSize="15sp"
+                            android:textColor="#7D7885"
+                            android:layout_gravity="center_vertical"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            // RL Ten : profile chat
+            <RelativeLayout
+                android:id="@+id/profilePageRLTen"
+                android:layout_below="@id/profilePageRLNine"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                // Card View One
+                <androidx.cardview.widget.CardView
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/profile_img_1"
+                                app:civ_border_width="1dp"
+                                app:civ_border_color="#FAF7F7"
+                                android:padding="7dp"/>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/textOne_sec_9"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kelly Knight"
+                                    android:textSize="20sp"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold|italic"
+                                    />
+                                <TextView
+                                    android:id="@+id/textTwo_sec_9"
+                                    android:layout_alignParentRight="true"
+                                    android:paddingRight="20dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30min"
+                                    android:textSize="12sp"
+                                    android:textColor="#CCD0D8"/>
+
+                                <ImageView
+                                    android:id="@+id/timeCountImg_sec_9"
+                                    android:layout_toLeftOf="@+id/textTwo_sec_9"
+                                    android:layout_marginRight="5dp"
+                                    android:foregroundGravity="center_vertical"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/profile_page_clock_icon"/>
+
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

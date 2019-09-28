@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    // toolbar top
+    <RelativeLayout
+        android:id="@+id/toolbarRelLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar_home" />
+
+    </RelativeLayout>
+
+    // Search Box area
+    <RelativeLayout
+        android:id="@+id/searchBoxSearchPage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/toolbarRelLayoutSearch"
+        android:background="@color/toolbar_blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/searchBoxIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/searchBoxIcon"
+                android:background="@null"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    // body area
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavId"
+        android:layout_below="@+id/searchBoxSearchPage">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                // headline area
+
+                <RelativeLayout
+                    android:id="@+id/searchPageRLOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    // Card View One
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="0dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/textView_sec_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HIV Details"
+                                android:textColor="#000000"
+                                android:textSize="25sp"
+                                android:textStyle="bold|italic" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/home_text_bg_two"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="10dp"
+                                android:text="MORE"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView_sec_1"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="0dp"
+                                android:text="@string/testText"
+                                android:textColor="#BFC1D9" />
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                // headline area
+
+                <RelativeLayout
+                    android:id="@+id/searchPageRLTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchPageRLOne"
+                    android:background="#FFFFFF">
+
+                    // Card View One
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="0dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        // separate Area
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/search_pageRL_text_02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/search_page_text_bg_one"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="25dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="PEOPLES"
+                                    android:textColor="#FFFFFF" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/profile_image"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:padding="7dp"
+                                        android:src="@drawable/profile_img_1"
+                                        app:civ_border_color="#FAF7F7"
+                                        app:civ_border_width="1dp" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/text1SearchPage"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="New Post"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginRight="20dp"
+                                            android:src="@drawable/ic_forward_arrow" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/text1SearchPage"
+                                            android:text="Photographer"
+                                            android:textColor="#564AF0"
+                                            android:textSize="12sp" />
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/profile_image2"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:padding="7dp"
+                                        android:src="@drawable/profile_img_2"
+                                        app:civ_border_color="#FAF7F7"
+                                        app:civ_border_width="1dp" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:gravity="center_vertical">
+
+                                        <TextView
+                                            android:id="@+id/text1SearchPage_sec2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:text="New Post"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <ImageView
+                                            android:layout_width="12dp"
+                                            android:layout_height="12dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginRight="20dp"
+                                            android:src="@drawable/ic_forward_arrow" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/text1SearchPage_sec2"
+                                            android:text="Photographer"
+                                            android:textColor="#564AF0"
+                                            android:textSize="12sp" />
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                // headline area Two
+                <RelativeLayout
+                    android:id="@+id/searchPageRLThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchPageRLTwo"
+                    android:background="#FFFFFF">
+
+                    // Card View One
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="0dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        // separate Area
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/search_pageRL_text_02_sec_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/search_page_text_bg_one"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="25dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="SUBJECTS"
+                                    android:textColor="#FFFFFF" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="15dp">
+
+                                <TextView
+                                    android:id="@+id/textView_sec_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="HIV Details"
+                                    android:textColor="#000000"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold|italic" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textView_sec_2"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingBottom="0dp"
+                                    android:text="@string/testText"
+                                    android:textColor="#BFC1D9" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+    // footer area
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/bottomNavId"
+        android:background="#F1E9E9" />
+
+    <RelativeLayout
+        android:id="@+id/bottomNavId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/bottom_nav_toolbar" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ChatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    // toolbar top
+    <RelativeLayout
+        android:id="@+id/toolbarRLSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/toolbar_home" />
+
+    </RelativeLayout>
+
+    // chat or groups area
+    <RelativeLayout
+        android:id="@+id/chatOrGroup"
+        android:layout_below="@+id/toolbarRLSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50">
+
+                <TextView
+                    android:elevation="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/chat_bd_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHAT"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50">
+
+                <TextView
+                    android:elevation="2dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/chat_bd_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GROUPS"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="28dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    // body part
+    <RelativeLayout
+        android:layout_above="@+id/bottomNavId"
+        android:layout_below="@+id/chatOrGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                // separeare area one
+                <RelativeLayout
+                    android:id="@+id/chatRLBodyOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_one"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_1"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus"
+                            android:layout_below="@+id/profileName"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Typing..."
+                            android:textSize="12sp"
+                            android:textColor="#FFDF36"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                // separeare area Two
+                <RelativeLayout
+                    android:id="@+id/chatRLBodyTwo"
+                    android:layout_below="@+id/chatRLBodyOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_Two"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_5"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_Two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName_sec_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus_sec_two"
+                            android:layout_below="@+id/profileName_sec_two"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nice weather... How are you"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime_sec_two"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/massageCounter"
+                            android:layout_below="@+id/profileTime_sec_two"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ovar_bg"
+                            android:text="3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                // separeare area Three
+                <RelativeLayout
+                    android:id="@+id/chatRLBodyThree"
+                    android:layout_below="@+id/chatRLBodyTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_Three"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_1"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_Three"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName_sec_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus_sec_three"
+                            android:layout_below="@+id/profileName_sec_three"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nice weather... How are you"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime_sec_three"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/massageCounter_three"
+                            android:layout_below="@+id/profileTime_sec_three"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ovar_bg"
+                            android:text="3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                // separeare area Four
+                <RelativeLayout
+                    android:id="@+id/chatRLBodyFour"
+                    android:layout_below="@+id/chatRLBodyThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_four"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_3"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName_sec_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus_sec_four"
+                            android:layout_below="@+id/profileName_sec_four"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nice weather... How are you"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime_sec_four"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/massageCounter_four"
+                            android:layout_below="@+id/profileTime_sec_four"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ovar_bg"
+                            android:text="3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                // separeare area Five
+                <RelativeLayout
+                    android:id="@+id/chatRLBodyFive"
+                    android:layout_below="@+id/chatRLBodyFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_five"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_1"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName_sec_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus_sec_five"
+                            android:layout_below="@+id/profileName_sec_five"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nice weather... How are you"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime_sec_five"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/massageCounter_five"
+                            android:layout_below="@+id/profileTime_sec_five"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ovar_bg"
+                            android:text="3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                // separeare area Six
+                <RelativeLayout
+                    android:id="@+id/chatRLBodySix"
+                    android:layout_below="@+id/chatRLBodyFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/profileImag_sec_six"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/chat_image_2"
+                            android:elevation="2dp"/>
+                        <View
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:elevation="10dp"
+                            android:background="@drawable/chat_bd_three"
+                            android:layout_marginLeft="46dp"
+                            android:layout_marginTop="51dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:paddingLeft="20dp"
+                        android:layout_toRightOf="@+id/profileImag_sec_six"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/profileName_sec_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jessy Jacky"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/profileWritingStatus_sec_six"
+                            android:layout_below="@+id/profileName_sec_six"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nice weather... How are you"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            />
+                        <TextView
+                            android:id="@+id/profileTime_sec_six"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:30 AM"
+                            android:textSize="12sp"
+                            android:textColor="#424242"
+                            android:layout_marginTop="25dp" />
+                        <TextView
+                            android:id="@+id/massageCounter_six"
+                            android:layout_below="@+id/profileTime_sec_six"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ovar_bg"
+                            android:text="3"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEE8E8"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+
+    // footer area
+    <RelativeLayout
+        android:layout_above="@id/bottomNavId"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F1E9E9"/>
+    <RelativeLayout
+        android:id="@+id/bottomNavId"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/bottom_nav_toolbar"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="toolbar_blue">#564AF0</color>
+    <color name="transparent">#00000000</color>
+    <color name="app_primary">#E2B3B3</color>
+    <color name="app_primary_pressed">#F06B6B</color>
+    <color name="app_ripple">#C43939</color>
+    <color name="medspace_basic_color">#0077be</color>
+
+    <integer-array name="fab_menu_item_colors">
+        <!-- A dark Holo shade of red -->
+        <item>@android:color/holo_red_dark</item>
+        <!-- A Holo shade of purple -->
+        <item>@android:color/holo_purple</item>
+        <!-- A light Holo shade of green -->
+        <item>@android:color/holo_green_light</item>
+    </integer-array>
+
+
+</resources>

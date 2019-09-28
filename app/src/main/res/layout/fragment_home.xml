@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    // toolbar top
+    <RelativeLayout
+        android:id="@+id/toolbarRelLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar_home"/>
+
+    </RelativeLayout>
+
+    // Flotting button Area One//
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:elevation="10dp"-->
+<!--        android:layout_marginBottom="90dp"-->
+<!--        android:layout_marginRight="50dp">-->
+
+<!--        <com.github.clans.fab.FloatingActionMenu-->
+<!--            android:id="@+id/menu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            fab:menu_fab_size="mini"-->
+<!--            fab:menu_showShadow="true"-->
+<!--            fab:menu_shadowColor="#66000000"-->
+<!--            fab:menu_shadowRadius="4dp"-->
+<!--            fab:menu_shadowXOffset="1dp"-->
+<!--            fab:menu_shadowYOffset="3dp"-->
+<!--            fab:menu_colorNormal="#4EE20F"-->
+<!--            fab:menu_colorPressed="#E75043"-->
+<!--            fab:menu_colorRipple="#99FFFFFF"-->
+<!--            fab:menu_animationDelayPerItem="50"-->
+<!--            fab:menu_icon="@drawable/fab_add"-->
+<!--            fab:menu_buttonSpacing="0dp"-->
+<!--            fab:menu_labels_margin="0dp"-->
+<!--            fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"-->
+<!--            fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"-->
+<!--            fab:menu_labels_paddingTop="4dp"-->
+<!--            fab:menu_labels_paddingRight="8dp"-->
+<!--            fab:menu_labels_paddingBottom="4dp"-->
+<!--            fab:menu_labels_paddingLeft="8dp"-->
+<!--            fab:menu_labels_padding="8dp"-->
+<!--            fab:menu_labels_textColor="#FFFFFF"-->
+<!--            fab:menu_labels_textSize="14sp"-->
+<!--            fab:menu_labels_cornerRadius="3dp"-->
+<!--            fab:menu_labels_colorNormal="#333333"-->
+<!--            fab:menu_labels_colorPressed="#444444"-->
+<!--            fab:menu_labels_colorRipple="#66FFFFFF"-->
+<!--            fab:menu_labels_showShadow="true"-->
+<!--            fab:menu_labels_singleLine="false"-->
+<!--            fab:menu_labels_ellipsize="none"-->
+<!--            fab:menu_labels_maxLines="-1"-->
+<!--            fab:menu_labels_position="left"-->
+<!--            fab:menu_openDirection="up"-->
+<!--            fab:menu_backgroundColor="@android:color/transparent"-->
+<!--            fab:menu_fab_label="your_label_here">-->
+
+
+
+<!--            <com.github.clans.fab.FloatingActionButton-->
+<!--                android:id="@+id/fab1"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_gravity="bottom|right"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:src="@drawable/ic_home"-->
+<!--                fab:fab_colorNormal="@color/app_primary"-->
+<!--                fab:fab_colorPressed="@color/app_primary_pressed"-->
+<!--                fab:fab_colorRipple="@color/app_ripple"-->
+<!--                app:fab_label="Menu Two"/>-->
+
+<!--            <com.github.clans.fab.FloatingActionButton-->
+<!--                android:id="@+id/fab2"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_gravity="bottom|right"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:src="@drawable/ic_video_file_icon"-->
+<!--                fab:fab_colorNormal="@color/app_primary"-->
+<!--                fab:fab_colorPressed="@color/app_primary_pressed"-->
+<!--                fab:fab_colorRipple="@color/app_ripple"-->
+<!--                app:fab_label="Menu Two"/>-->
+
+<!--        </com.github.clans.fab.FloatingActionMenu>-->
+
+
+
+<!--    </RelativeLayout>-->
+    // Flotting button Area One End//
+
+        // Floting action button Two Start
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:elevation="10dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="0dp">
+
+        // Floting area two
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <io.github.yavski.fabspeeddial.FabSpeedDial
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    app:fabGravity="bottom_end"
+                    app:fabMenu="@menu/floting_menu"
+                    app:miniFabBackgroundTint="#FFFFFF"
+                    app:miniFabDrawableTint="#0D2FEC"
+                    app:miniFabTitleTextColor="#0D2FEC" />
+
+                </FrameLayout>
+
+        </RelativeLayout>
+
+    // End : Floting action button Two Start
+
+
+    <RelativeLayout
+
+        android:layout_above="@+id/borderRelLayout"
+        android:layout_below="@+id/toolbarRelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/homeBodyRLOne"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    // Card View One
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginRight="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/profile_image"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/profile_img_1"
+                                    app:civ_border_width="1dp"
+                                    app:civ_border_color="#FAF7F7"
+                                    android:padding="7dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="New Post"
+                                        android:textSize="15sp"
+                                        android:textColor="#000000"/>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/homeBodyRLOne"
+                    android:id="@+id/homeBodyRLTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/textViewImage"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/home_text_bg_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IMAGE"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/textViewImage"
+                        android:id="@+id/textViewVideo"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/home_text_bg_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIDEO"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/textViewVideo"
+                        android:id="@+id/textViewFiles"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/home_text_bg_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FIELS"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/textViewFiles"
+                        android:id="@+id/textViewPolo"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/home_text_bg_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="POLL"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
+
+                </RelativeLayout>
+
+                // Main Feed Area
+                <RelativeLayout
+                    android:id="@+id/homeBodyRLThree"
+                    android:layout_below="@id/homeBodyRLTwo"
+                    android:layout_marginTop="15dp"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    // Card View One
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginRight="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/profile_img_1"
+                                    app:civ_border_width="1dp"
+                                    app:civ_border_color="#FAF7F7"
+                                    android:padding="7dp"/>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/textOne"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kelly Knight"
+                                        android:textSize="20sp"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold|italic"
+                                        />
+                                    <TextView
+                                        android:id="@+id/textTwo"
+                                        android:layout_alignParentRight="true"
+                                        android:paddingRight="20dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="30min"
+                                        android:textSize="12sp"
+                                        android:textColor="#CCD0D8"/>
+
+                                    <ImageView
+                                        android:id="@+id/timeCountImg"
+                                        android:layout_toLeftOf="@+id/textTwo"
+                                        android:layout_marginRight="5dp"
+                                        android:foregroundGravity="center_vertical"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/ic_clock"/>
+
+
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeRLFour"
+                    android:layout_below="@id/homeBodyRLThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text1homeRLFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discription"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/text2homeRLFour"
+                        android:layout_below="@id/text1homeRLFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/testText"
+                        android:textSize="12sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_below="@+id/text2homeRLFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/imag3"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeRLFive"
+                    android:layout_below="@+id/homeRLFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="120">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_like"
+                                android:layout_gravity="center_vertical"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2 K"
+                                android:textSize="15sp"
+                                android:textColor="#F7585E"
+                                android:layout_gravity="center_vertical"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40">
+
+                            <TextView
+                                android:background="@drawable/home_text_bg_two"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Share" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_comment"
+                                android:layout_gravity="center_vertical"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="98"
+                                android:textSize="15sp"
+                                android:textColor="#7D7885"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                // Main Feed Area Two
+                <RelativeLayout
+                    android:id="@+id/homeBodyRLSix"
+                    android:layout_below="@id/homeRLFive"
+                    android:layout_marginTop="15dp"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    // Card View One
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginRight="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/profile_img_1"
+                                    app:civ_border_width="1dp"
+                                    app:civ_border_color="#FAF7F7"
+                                    android:padding="7dp"/>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/textOne_sec_2"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Kelly Knight"
+                                        android:textSize="20sp"
+                                        android:textColor="#000000"
+                                        android:textStyle="bold|italic"
+                                        />
+                                    <TextView
+                                        android:id="@+id/textTwos_sec_2"
+                                        android:layout_alignParentRight="true"
+                                        android:paddingRight="20dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="30min"
+                                        android:textSize="12sp"
+                                        android:textColor="#CCD0D8"/>
+
+                                    <ImageView
+                                        android:id="@+id/timeCountImg_sec_2"
+                                        android:layout_toLeftOf="@+id/textTwos_sec_2"
+                                        android:layout_marginRight="5dp"
+                                        android:foregroundGravity="center_vertical"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@drawable/ic_clock"/>
+
+
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/homeRLSeven"
+                    android:layout_below="@id/homeBodyRLThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text1homeRLFour_sec_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discription"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/text2homeRLFour_sec_2"
+                        android:layout_below="@id/text1homeRLFour_sec_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/testText"
+                        android:textSize="12sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="20dp"
+                        />
+
+                    <ImageView
+                        android:layout_below="@+id/text2homeRLFour_sec_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/imag3"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homeRLEight"
+                    android:layout_below="@+id/homeRLFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="120">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_like"
+                                android:layout_gravity="center_vertical"/>
+                            <TextView
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2 K"
+                                android:textSize="15sp"
+                                android:textColor="#F7585E"
+                                android:layout_gravity="center_vertical"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40">
+
+                            <TextView
+                                android:background="@drawable/home_text_bg_two"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Share" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_comment"
+                                android:layout_gravity="center_vertical"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="98"
+                                android:textSize="15sp"
+                                android:textColor="#7D7885"
+                                android:layout_gravity="center_vertical"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+
+    // footer area
+    <RelativeLayout
+        android:id="@+id/borderRelLayout"
+        android:layout_above="@id/bottomNavId"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F1E9E9"/>
+    <RelativeLayout
+        android:id="@+id/bottomNavId"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/bottom_nav_toolbar"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
