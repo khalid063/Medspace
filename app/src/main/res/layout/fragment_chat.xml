@@ -290,7 +290,7 @@
                             android:id="@+id/profileName_sec_three"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Jessy Jacky"
+                            android:text="Jessy Jacky Jas"
                             android:textSize="15sp"
                             android:textColor="#000000"
                             android:layout_marginTop="25dp" />
