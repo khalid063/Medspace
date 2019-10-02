@@ -4,23 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.medspace.Activities.ProfileActivity;
-import com.example.medspace.Activities.RegistrationActivity;
 import com.example.medspace.Activities.RegistrationActivityTwo;
-import com.example.medspace.Fragments.HomeActivity;
+import com.example.medspace.Model.CreatUserResponse;
+import com.example.medspace.Model.SignInResponse;
+import com.example.medspace.Retrofit.RetrofitClient;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity  implements View.OnClickListener {
 
     private ImageView imageViewSigninBut;
     private TextView textViewDontHaveAnyAccountBut;
 
-    private EditText userName, userPassword;
+    private EditText etUserName, etPserPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,9 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 
         imageViewSigninBut = findViewById(R.id.signinNextButtonId);
         textViewDontHaveAnyAccountBut = findViewById(R.id.dontHaveAnyAccount);
+
+        etUserName = findViewById(R.id.userName);
+        etPserPassword = findViewById(R.id.password);
 
         imageViewSigninBut.setOnClickListener(this);
         textViewDontHaveAnyAccountBut.setOnClickListener(this);
@@ -78,27 +86,71 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     @Override
     public void onClick(View v) {
 
-        if (v.getId() == R.id.signinNextButtonId){
+        userLogin(etUserName.getText().toString(), etPserPassword.getText().toString());
 
-                EditText username = (EditText)findViewById(R.id.userName);
-                EditText password = (EditText)findViewById(R.id.password);
+//        if (v.getId() == R.id.signinNextButtonId){
+//
+//                EditText username = (EditText)findViewById(R.id.userName);
+//                EditText password = (EditText)findViewById(R.id.password);
+//
+//                if (username.getText().toString().equals("admin") &&
+//                        password.getText().toString().equals("12345")){
+//
+//                    Intent i = new Intent(LoginActivity.this,
+//                            MainActivity.class);
+//                    startActivity(i);
+//                }else {
+//                    Toast.makeText(LoginActivity.this, "Wrong Pass", Toast.LENGTH_SHORT).show();
+//                }
+//        }
+//        else if (v.getId() == R.id.dontHaveAnyAccount){
+//            Intent i = new Intent(LoginActivity.this,
+//                    RegistrationActivityTwo.class);
+//            startActivity(i);
+//        }
 
-                if (username.getText().toString().equals("admin") &&
-                        password.getText().toString().equals("12345")){
 
-                    Intent i = new Intent(LoginActivity.this,
-                            MainActivity.class);
+    }
+
+    private void userLogin(final String userName, String password) {
+
+        Call<SignInResponse> call = RetrofitClient
+                .getInstance()
+                .getApi()
+                .userLogin("4358cd151d116939800592f71de56335",userName, password);
+
+        call.enqueue(new Callback<SignInResponse>() {
+            @Override
+            public void onResponse(Call<SignInResponse> call, Response<SignInResponse> response) {
+
+                SignInResponse s = response.body();
+                Toast.makeText(LoginActivity.this, s.getUserId(), Toast.LENGTH_SHORT).show();
+                Log.d("Tag_msg",  "Response "+ s.getUserId());
+
+                int userStatus = s.getApiStatus();
+
+                if (userStatus == 200){
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);
-                }else {
-                    Toast.makeText(LoginActivity.this, "Wrong Pass", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Something goes wrong", Toast.LENGTH_LONG).show();
                 }
-        }
-        else if (v.getId() == R.id.dontHaveAnyAccount){
-            Intent i = new Intent(LoginActivity.this,
-                    RegistrationActivityTwo.class);
-            startActivity(i);
-        }
 
+
+
+            }
+
+            @Override
+            public void onFailure(Call<SignInResponse> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+//        Intent i = new Intent(LoginActivity.this,
+//                            MainActivity.class);
+//                    startActivity(i);
 
     }
 }

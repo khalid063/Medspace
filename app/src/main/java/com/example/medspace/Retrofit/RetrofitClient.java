@@ -16,10 +16,6 @@ public class RetrofitClient {
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 
-//    private static Gson gson = new GsonBuilder()
-//            .setLenient()
-//            .create();
-
     private RetrofitClient(){
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

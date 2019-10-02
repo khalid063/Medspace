@@ -3,12 +3,14 @@ package com.example.medspace.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.medspace.MainActivity;
+import com.example.medspace.Model.CreatUserResponse;
 import com.example.medspace.R;
 import com.example.medspace.Retrofit.RetrofitClient;
 
@@ -22,6 +24,7 @@ import retrofit2.Response;
 public class RegistrationActivityTwo extends AppCompatActivity {
 
     private Button buttonSubmit;
+    // for rest api
     private EditText editTextUserName, editTextEmail, editTextPassword, editTextConfirmPass;
 
     @Override
@@ -32,11 +35,14 @@ public class RegistrationActivityTwo extends AppCompatActivity {
 
         buttonSubmit = findViewById(R.id.submitButton);
 
+        // for rest api
         editTextUserName = findViewById(R.id.userName);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
         editTextConfirmPass = findViewById(R.id.confirmPassword);
 
+
+        // for rest api
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,27 +58,28 @@ public class RegistrationActivityTwo extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
                 String confirmPassword = editTextConfirmPass.getText().toString();
 
+                Log.d("Tag_msg", "parems " + userName + ", " + email + ", "+ password +", "+ confirmPassword );
 
-                Call<ResponseBody> call = RetrofitClient
+
+                Call<CreatUserResponse> call = RetrofitClient
                         .getInstance()
                         .getApi()
-                        .creatUser(userName, email, password, confirmPassword);
+                        .creatUser( "4358cd151d116939800592f71de56335",userName, password, email, confirmPassword);
 
-                call.enqueue(new Callback<ResponseBody>() {
+                call.enqueue(new Callback<CreatUserResponse>() {
                     @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    public void onResponse(Call<CreatUserResponse> call, Response<CreatUserResponse> response) {
 
-                        try {
-                            String s = response.body().string();
-                            Toast.makeText(RegistrationActivityTwo.this, s, Toast.LENGTH_SHORT).show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+
+                            CreatUserResponse s = response.body();
+                            Toast.makeText(RegistrationActivityTwo.this, s.getUserId(), Toast.LENGTH_SHORT).show();
+                            Log.d("Tag_msg",  "Response "+ s.getAccessToken());
+
 
                     }
 
                     @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    public void onFailure(Call<CreatUserResponse> call, Throwable t) {
                             Toast.makeText(RegistrationActivityTwo.this, t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
