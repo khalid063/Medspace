@@ -8,15 +8,29 @@ import android.os.Bundle;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.medspace.Activities.NotificationActivity;
 import com.example.medspace.Activities.ProfileActivity;
+import com.example.medspace.LoginActivity;
+import com.example.medspace.MainActivity;
+import com.example.medspace.Model.SignInResponse;
 import com.example.medspace.R;
+import com.example.medspace.Retrofit.RetrofitClient;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class HomeActivity extends Fragment implements View.OnClickListener {
@@ -29,11 +43,14 @@ public class HomeActivity extends Fragment implements View.OnClickListener {
                         imageViewNotificationBut;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
+
+
 
         // for icon color change
         ImageView  imageViewHomeIcon = view.findViewById(R.id.homeImageViewIcon);
@@ -74,8 +91,12 @@ public class HomeActivity extends Fragment implements View.OnClickListener {
         imageViewNotificationBut.setOnClickListener(this);
 
 
+
+
+
         return view;
     }
+
 
 
     @Override
@@ -129,8 +150,6 @@ public class HomeActivity extends Fragment implements View.OnClickListener {
 
         // for go home to notification  activity
         else if ( v.getId() == R.id.home_toolbar_notificaion_icon){
-//            Intent i = new Intent(getActivity(), NotificationActivity.class);
-//            startActivity(i);
 
             getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
                     new NotificationFragment()).commit();

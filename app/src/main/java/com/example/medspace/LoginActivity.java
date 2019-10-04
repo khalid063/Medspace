@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medspace.Activities.ForgetPasswordActivity;
 import com.example.medspace.Activities.RegistrationActivityTwo;
 import com.example.medspace.Model.CreatUserResponse;
 import com.example.medspace.Model.SignInResponse;
@@ -23,7 +24,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity  implements View.OnClickListener {
 
     private ImageView imageViewSigninBut;
-    private TextView textViewDontHaveAnyAccountBut;
+    private TextView textViewDontHaveAnyAccountBut, tvForgtPassword;
 
     private EditText etUserName, etPserPassword;
 
@@ -39,44 +40,25 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         etUserName = findViewById(R.id.userName);
         etPserPassword = findViewById(R.id.password);
 
+        tvForgtPassword = findViewById(R.id.forgetPasswordId);
+
+
         imageViewSigninBut.setOnClickListener(this);
         textViewDontHaveAnyAccountBut.setOnClickListener(this);
+        tvForgtPassword.setOnClickListener(this);
 
 
 
-//        textViewDontHaveAnyAccount.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(LoginActivity.this,
-//                        HomeActivity.class);
-//                startActivity(i);
-//                Toast.makeText(LoginActivity.this, "Registration Page", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
+        textViewDontHaveAnyAccountBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this,
+                        RegistrationActivityTwo.class);
+                startActivity(i);
+                Toast.makeText(LoginActivity.this, "Registration Page", Toast.LENGTH_SHORT).show();
 
-
-//        imageViewSigninBut.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                EditText username = (EditText)findViewById(R.id.userName);
-//                EditText password = (EditText)findViewById(R.id.password);
-//
-//                if (username.getText().toString().equals("admin") &&
-//                        password.getText().toString().equals("12345")){
-//
-//                    Intent i = new Intent(LoginActivity.this,
-//                            MainActivity.class);
-//                    startActivity(i);
-//                }else {
-//                    Toast.makeText(LoginActivity.this, "Wrong Pass", Toast.LENGTH_SHORT).show();
-//                }
-//
-//
-//
-//            }
-//        });
+            }
+        });
 
 
 
@@ -86,32 +68,21 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     @Override
     public void onClick(View v) {
 
-        userLogin(etUserName.getText().toString(), etPserPassword.getText().toString());
+        // Signin api work
+        if (v.getId() == R.id.signinNextButtonId){
+            userLogin(etUserName.getText().toString(),
+                    etPserPassword.getText().toString());
+        }else if (v.getId() == R.id.forgetPasswordId){
+            Intent i = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+            startActivity(i);
+        }
 
-//        if (v.getId() == R.id.signinNextButtonId){
-//
-//                EditText username = (EditText)findViewById(R.id.userName);
-//                EditText password = (EditText)findViewById(R.id.password);
-//
-//                if (username.getText().toString().equals("admin") &&
-//                        password.getText().toString().equals("12345")){
-//
-//                    Intent i = new Intent(LoginActivity.this,
-//                            MainActivity.class);
-//                    startActivity(i);
-//                }else {
-//                    Toast.makeText(LoginActivity.this, "Wrong Pass", Toast.LENGTH_SHORT).show();
-//                }
-//        }
-//        else if (v.getId() == R.id.dontHaveAnyAccount){
-//            Intent i = new Intent(LoginActivity.this,
-//                    RegistrationActivityTwo.class);
-//            startActivity(i);
-//        }
+
 
 
     }
 
+    // Signin api work
     private void userLogin(final String userName, String password) {
 
         Call<SignInResponse> call = RetrofitClient
@@ -145,12 +116,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-
-
-
-//        Intent i = new Intent(LoginActivity.this,
-//                            MainActivity.class);
-//                    startActivity(i);
+        //End : Signin api work
 
     }
 }
