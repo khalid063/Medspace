@@ -24,6 +24,8 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         imageViewNotificaionBackBut.setOnClickListener(this);
 
 
+
+
     }
 
     @Override

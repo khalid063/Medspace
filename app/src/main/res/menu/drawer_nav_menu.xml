@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/creat_group_id"
+            android:icon="@drawable/ic_group"
+            android:title="Creat Group" />
+        <item
+            android:id="@+id/chat_Dr_id"
+            android:icon="@drawable/chat_psd_icon"
+            android:title="Profile" />
+        <item
+            android:id="@+id/dr_home_id"
+            android:icon="@drawable/ic_home"
+            android:title="Chat" />
+
+    </group>
+
+<!--    <item android:title="Communication">-->
+
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/location_id"-->
+<!--                android:icon="@drawable/ic_add"-->
+<!--                android:title="Location" />-->
+<!--            <item-->
+<!--                android:id="@+id/music_id"-->
+<!--                android:icon="@drawable/ic_add"-->
+<!--                android:title="Music" />-->
+<!--        </menu>-->
+
+<!--    </item>-->
+
+</menu>

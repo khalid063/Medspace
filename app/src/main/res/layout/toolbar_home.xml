@@ -16,6 +16,7 @@
         android:layout_height="match_parent">
 
         <ImageView
+
             android:layout_centerVertical="true"
             android:layout_width="22dp"
             android:layout_height="23dp"

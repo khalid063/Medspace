@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.ForgetPasswordActivity"></activity>
+        <activity android:name=".Activities.CreatGroupActivity"></activity>
+        <activity android:name=".Activities.ForgetPasswordActivity" />
         <activity android:name=".Activities.RegistrationActivityTwo" />
         <activity android:name=".Activities.NotificationActivity" />
         <activity android:name=".Activities.ProfileActivity" />

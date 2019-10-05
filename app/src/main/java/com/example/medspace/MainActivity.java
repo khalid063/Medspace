@@ -1,26 +1,38 @@
 package com.example.medspace;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medspace.Activities.CreatGroupActivity;
 import com.example.medspace.Activities.NotificationActivity;
 import com.example.medspace.Activities.ProfileActivity;
 import com.example.medspace.Fragments.ChatFragment;
+import com.example.medspace.Fragments.CreatGroupFragment;
 import com.example.medspace.Fragments.DiscassionFragment;
 import com.example.medspace.Fragments.HomeActivity;
 import com.example.medspace.Fragments.LibraryFragment;
 import com.example.medspace.Fragments.NotificationFragment;
 import com.example.medspace.Fragments.SearchFragment;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener{
 
+    private static final String TAG = "MainActivity";
 
     private LinearLayout linearLayoutHomeBut, linearLayoutSearchBut, linearLayoutdiscasBut,
             linearLayoutChatBut, linearLayoutLibBut;
@@ -30,6 +42,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             imageViewNotificationBut;
 
     private TextView textViewTitleOfHome;
+
+
+
+    // for Drawar Navigation menu
+    RelativeLayout rlDrawarButtton;
+    DrawerLayout drawerLayout;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +61,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // for icon color change
         ImageView  imageViewHomeIcon = findViewById(R.id.homeImageViewIcon);
         imageViewHomeIcon.setColorFilter(getResources().getColor(R.color.toolbar_blue));
+
+        // for Drawar Navigation menu
+        rlDrawarButtton = findViewById (R.id.homeIcon);
+        drawerLayout = findViewById (R.id.drawar_layout);
+        navigationView = findViewById(R.id.nav_view_id);
+
+
+
+
 
         linearLayoutHomeBut = findViewById(R.id.homeButId);
         linearLayoutSearchBut = findViewById(R.id.searchButId);
@@ -80,6 +108,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageViewProfileBut.setOnClickListener(this);
          //home Notification button
         imageViewNotificationBut.setOnClickListener(this);
+
+        // for drawar menu
+        rlDrawarButtton.setOnClickListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
+
 
 
 
@@ -348,74 +381,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
 
             }
-//            Intent i = new Intent(getActivity(), NotificationActivity.class);
-//            startActivity(i);
+
+        // For drawar navigation menu
+        else if (v.getId() == R.id.homeIcon){
+
+                drawerLayout.openDrawer(GravityCompat.START);
 
 
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new NotificationFragment()).commit();
 
+            }
 
-
-//        if ( v.getId() == R.id.homeButId){
-////            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-////                    new HomeActivity()).commit();
-//
-//            getFragmentManager().beginTransaction()
-//                    .replace(R.id.fragmentContainer_home, new HomeActivity()).commit();
-//
-//        }else if ( v.getId() == R.id.homeImageViewIcon){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new HomeActivity()).commit();
-//        }
-//
-//        else if ( v.getId() == R.id.searchButId){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new SearchFragment()).commit();
-//        }else if ( v.getId() == R.id.searchImageViewIcon){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new SearchFragment()).commit();
-//        }
-//
-//        else if ( v.getId() == R.id.discasionhButId){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new DiscassionFragment()).commit();
-//        }else if ( v.getId() == R.id.discassionImageViewIcon){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new DiscassionFragment()).commit();
-//        }
-//
-//        else if ( v.getId() == R.id.chatButId){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new ChatFragment()).commit();
-//        }else if ( v.getId() == R.id.chatImageViewIcon){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new ChatFragment()).commit();
-//        }
-//
-//        else if ( v.getId() == R.id.libraryButId){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new LibraryFragment()).commit();
-//        }else if ( v.getId() == R.id.libraryImageViewIcon){
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new LibraryFragment()).commit();
-//        }
-//
-//        // for go profile activity
-//        else if ( v.getId() == R.id.profileIconBut){
-//            Intent i = new Intent(MainActivity.this, ProfileActivity.class);
-//            startActivity(i);
-//        }
-//
-//        // for go home to notification  activity
-//        else if ( v.getId() == R.id.home_toolbar_notificaion_icon){
-//
-//            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer_home,
-//                    new NotificationFragment()).commit();
-//
-//
-//        }
 
 
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Log.d(TAG,"onNavigationItemSelected");
+
+        switch(menuItem.getItemId()){
+            case R.id.creat_group_id:
+                Toast.makeText(MainActivity.this,"Home item click", Toast.LENGTH_LONG).show();
+                break;
+        }
+
+        return true;
+
+    }
+    // For Drawar navigation item action
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        MenuInflater inflater = getMenuInflater();inflater.inflate(R.menu.drawer_nav_menu, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        super.onOptionsItemSelected(item);
+//        switch(item.getItemId()){
+//            case R.id.creat_group_id:
+//                Toast.makeText(MainActivity.this,"Home item click", Toast.LENGTH_LONG).show();
+//                return true;
+//        }
+//
+//        return true;
+//    }
+
+
+
+
+
 }
