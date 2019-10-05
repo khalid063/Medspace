@@ -8,15 +8,15 @@
 
     <!-- TODO: Update blank fragment layout -->
     // toolbar top
-    <RelativeLayout
-        android:id="@+id/toolbarRelLayoutSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/toolbarRelLayoutSearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true">-->
 
-        <include layout="@layout/toolbar_home" />
+<!--        <include layout="@layout/toolbar_home" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
     // Search Box area
     <RelativeLayout
@@ -406,20 +406,20 @@
 
     // footer area
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_above="@id/bottomNavId"
-        android:background="#F1E9E9" />
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:layout_above="@id/bottomNavId"-->
+<!--        android:background="#F1E9E9" />-->
 
-    <RelativeLayout
-        android:id="@+id/bottomNavId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/bottomNavId"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true">-->
 
-        <include layout="@layout/bottom_nav_toolbar" />
+<!--        <include layout="@layout/bottom_nav_toolbar" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </RelativeLayout>

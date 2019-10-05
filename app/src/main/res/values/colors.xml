@@ -10,6 +10,7 @@
     <color name="app_ripple">#C43939</color>
     <color name="medspace_basic_color">#0077be</color>
 
+
     <integer-array name="fab_menu_item_colors">
         <!-- A dark Holo shade of red -->
         <item>@android:color/holo_red_dark</item>

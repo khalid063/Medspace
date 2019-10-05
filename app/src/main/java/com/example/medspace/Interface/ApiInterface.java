@@ -2,6 +2,7 @@ package com.example.medspace.Interface;
 
 import com.example.medspace.Model.CreatUserResponse;
 import com.example.medspace.Model.ForgetPasswordResponse;
+import com.example.medspace.Model.GetUserDataResponse;
 import com.example.medspace.Model.SignInResponse;
 
 import okhttp3.ResponseBody;
@@ -40,12 +41,23 @@ public interface ApiInterface {
     );
 
     @FormUrlEncoded
+    @POST("get-user-data")
+    Call<GetUserDataResponse> getUserData(
+            @Field("server_key") String serverKey,
+            @Field("user_id") String userId,
+            @Field("fecth") String user_Data
+
+    );
+
+    @FormUrlEncoded
     @POST("get_news_feed")
     Call<ResponseBody> getNewsFeed(
             @Field("user_id") int userId,
             @Field("page_id") int pageId,
             @Field("group_id") int groupId
     );
+
+
 
 
 

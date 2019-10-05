@@ -2,6 +2,7 @@ package com.example.medspace.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.medspace.LoginActivity;
 import com.example.medspace.Model.CreatUserResponse;
 import com.example.medspace.Model.ForgetPasswordResponse;
 import com.example.medspace.R;
@@ -51,6 +53,8 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                         ForgetPasswordResponse s = response.body();
                         //Toast.makeText(ForgetPasswordActivity.this, s.getApiStatus(), Toast.LENGTH_SHORT).show();
                         Log.d("Tag_msg_One",  "Response email"+ s.getApiStatus());
+                        Intent i = new Intent(ForgetPasswordActivity.this, LoginActivity.class);
+                        startActivity(i);
                     }
 
                     @Override

@@ -7,20 +7,19 @@
 
     <!-- TODO: Update blank fragment layout -->
     // toolbar top
-    <RelativeLayout
-        android:id="@+id/toolbarRLSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/toolbarRLSearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true">-->
 
-        <include layout="@layout/toolbar_home" />
+<!--        <include layout="@layout/toolbar_home" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
     // chat or groups area
     <RelativeLayout
         android:id="@+id/chatOrGroup"
-        android:layout_below="@+id/toolbarRLSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -604,19 +603,19 @@
 
 
     // footer area
-    <RelativeLayout
-        android:layout_above="@id/bottomNavId"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#F1E9E9"/>
-    <RelativeLayout
-        android:id="@+id/bottomNavId"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <RelativeLayout-->
+<!--        android:layout_above="@id/bottomNavId"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#F1E9E9"/>-->
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/bottomNavId"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <include layout="@layout/bottom_nav_toolbar"/>
+<!--        <include layout="@layout/bottom_nav_toolbar"/>-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </RelativeLayout>
